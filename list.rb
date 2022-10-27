@@ -21,5 +21,7 @@ p numbers.list
 numbers.all? { |number| number < 5}
 numbers.all? { |number| number > 5}
 
+numbers.any? { |number| number == 2}
+numbers.any? { |number| number ==5 }
 
-
+numbers.filter { |number| number.even? }

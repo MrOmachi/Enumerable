@@ -13,7 +13,7 @@ end
 
 def filter
   arr = []
-  list.each { |el| arr.push(el) if yield }
+  list.each { |el| arr.push(el) if yield el }
   puts arr
 end
 end

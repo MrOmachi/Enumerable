@@ -1,7 +1,7 @@
 require_relative './enumerable'
 
 class MyList
-include MyEnumerable
+  include MyEnumerable
 
   def initialize(*list)
     @list = list
@@ -16,12 +16,12 @@ end
 
 numbers = MyList.new(1, 2, 3, 4)
 
-p numbers.list
+numbers.each { |number| puts number }
 
-numbers.all? { |number| number < 5}
-numbers.all? { |number| number > 5}
+numbers.all? { |number| number < 5 }
+numbers.all? { |number| number > 5 }
 
-numbers.any? { |number| number == 2}
-numbers.any? { |number| number ==5 }
+numbers.any? { |number| number == 2 }
+numbers.any? { |number| number == 5 }
 
 numbers.filter { |number| number.even? }
